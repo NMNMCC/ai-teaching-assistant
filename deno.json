@@ -1,0 +1,51 @@
+{
+	"nodeModulesDir": "auto",
+	"tasks": {
+		"dev": "vite",
+		"build": "tsc -b && vite build",
+		"lint": "eslint .",
+		"preview": "vite preview"
+	},
+	"imports": {
+		"@carbon/react": "npm:@carbon/react@^1.92.1",
+		"@emotion/react": "npm:@emotion/react@^11.14.0",
+		"@emotion/styled": "npm:@emotion/styled@^11.14.1",
+		"@ibm/plex": "npm:@ibm/plex@^6.4.1",
+		"react": "npm:react@^18.3.1",
+		"react-dom": "npm:react-dom@^18.3.1",
+		"@eslint/js": "npm:@eslint/js@^9.37.0",
+		"@types/react": "npm:@types/react@^18.3.25",
+		"@types/react-dom": "npm:@types/react-dom@^18.3.7",
+		"@vitejs/plugin-react": "npm:@vitejs/plugin-react@^5.0.4",
+		"globals": "npm:globals@^16.4.0",
+		"sass-embedded": "npm:sass-embedded@^1.93.2",
+		"typescript": "npm:typescript@^5.8.3",
+		"typescript-eslint": "npm:typescript-eslint@^8.45.0",
+		"vite": "npm:vite@^7.1.9",
+		"wouter": "npm:wouter@^3.7.1"
+	},
+	"fmt": {
+		"useTabs": true,
+		"indentWidth": 4,
+		"newLineKind": "lf",
+		"useBraces": "always",
+		"semiColons": false,
+		"trailingCommas": "onlyMultiLine",
+		"spaceSurroundingProperties": false,
+		"spaceAround": false
+	},
+	"exclude": [
+		"node_modules",
+		"dist",
+		".*"
+	],
+	"lint": {
+		"rules": {
+			"tags": [
+				"recommended",
+				"jsx",
+				"react"
+			]
+		}
+	}
+}

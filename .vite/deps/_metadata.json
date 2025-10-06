@@ -1,0 +1,82 @@
+{
+  "hash": "86b15e12",
+  "configHash": "c5de0e4a",
+  "lockfileHash": "e3b0c442",
+  "browserHash": "71768a33",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/.deno/react@18.3.1/node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "586ae887",
+      "needsInterop": true
+    },
+    "react-dom": {
+      "src": "../../node_modules/.deno/react-dom@18.3.1/node_modules/react-dom/index.js",
+      "file": "react-dom.js",
+      "fileHash": "0b94ccdd",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/.deno/react@18.3.1/node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "6ab7dca5",
+      "needsInterop": true
+    },
+    "react/jsx-runtime": {
+      "src": "../../node_modules/.deno/react@18.3.1/node_modules/react/jsx-runtime.js",
+      "file": "react_jsx-runtime.js",
+      "fileHash": "c2c73b8d",
+      "needsInterop": true
+    },
+    "@carbon/react": {
+      "src": "../../node_modules/.deno/@carbon+react@1.92.1/node_modules/@carbon/react/es/index.js",
+      "file": "@carbon_react.js",
+      "fileHash": "8662a2f3",
+      "needsInterop": false
+    },
+    "@carbon/react/icons": {
+      "src": "../../node_modules/.deno/@carbon+react@1.92.1/node_modules/@carbon/react/icons/index.esm.js",
+      "file": "@carbon_react_icons.js",
+      "fileHash": "d88f26e4",
+      "needsInterop": false
+    },
+    "@emotion/styled": {
+      "src": "../../node_modules/.deno/@emotion+styled@11.14.1/node_modules/@emotion/styled/dist/emotion-styled.browser.development.esm.js",
+      "file": "@emotion_styled.js",
+      "fileHash": "bd66418e",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/.deno/react-dom@18.3.1/node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "80362cc7",
+      "needsInterop": true
+    },
+    "wouter": {
+      "src": "../../node_modules/.deno/wouter@3.7.1/node_modules/wouter/esm/index.js",
+      "file": "wouter.js",
+      "fileHash": "abe22e1a",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-5XDBNPHJ": {
+      "file": "chunk-5XDBNPHJ.js"
+    },
+    "chunk-L4IGN5KL": {
+      "file": "chunk-L4IGN5KL.js"
+    },
+    "chunk-YU7JK2X5": {
+      "file": "chunk-YU7JK2X5.js"
+    },
+    "chunk-Q2QHJSCX": {
+      "file": "chunk-Q2QHJSCX.js"
+    },
+    "chunk-M7K4YZI5": {
+      "file": "chunk-M7K4YZI5.js"
+    },
+    "chunk-NZTMCHCH": {
+      "file": "chunk-NZTMCHCH.js"
+    }
+  }
+}
