@@ -3,26 +3,11 @@
 	"tasks": {
 		"dev": "vite",
 		"build": "tsc -b && vite build",
-		"lint": "eslint .",
-		"preview": "vite preview"
-	},
-	"imports": {
-		"@carbon/react": "npm:@carbon/react@^1.92.1",
-		"@emotion/react": "npm:@emotion/react@^11.14.0",
-		"@emotion/styled": "npm:@emotion/styled@^11.14.1",
-		"@ibm/plex": "npm:@ibm/plex@^6.4.1",
-		"react": "npm:react@^18.3.1",
-		"react-dom": "npm:react-dom@^18.3.1",
-		"@eslint/js": "npm:@eslint/js@^9.37.0",
-		"@types/react": "npm:@types/react@^18.3.25",
-		"@types/react-dom": "npm:@types/react-dom@^18.3.7",
-		"@vitejs/plugin-react": "npm:@vitejs/plugin-react@^5.0.4",
-		"globals": "npm:globals@^16.4.0",
-		"sass-embedded": "npm:sass-embedded@^1.93.2",
-		"typescript": "npm:typescript@^5.8.3",
-		"typescript-eslint": "npm:typescript-eslint@^8.45.0",
-		"vite": "npm:vite@^7.1.9",
-		"wouter": "npm:wouter@^3.7.1"
+		"lint": "deno lint",
+		"fmt": "deno fmt",
+		"preview": "vite preview",
+		"cosmos": "deno run -A npm:react-cosmos/cosmos",
+		"cosmos-export": "deno run -A npm:react-cosmos/cosmos-export"
 	},
 	"fmt": {
 		"useTabs": true,
@@ -47,5 +32,27 @@
 				"react"
 			]
 		}
+	},
+	"imports": {
+		"@floating-ui/react-dom": "npm:@floating-ui/react-dom@^2.1.6",
+		"@fontsource-variable/ibm-plex-sans": "npm:@fontsource-variable/ibm-plex-sans@^5.2.8",
+		"@fontsource-variable/material-symbols-sharp": "npm:@fontsource-variable/material-symbols-sharp@5.2.26",
+		"@headlessui/react": "npm:@headlessui/react@2.2.9",
+		"clsx": "npm:clsx@2.1.1",
+		"react": "npm:react@19.2.0",
+		"react-dom": "npm:react-dom@19.2.0",
+		"wouter": "npm:wouter@3.7.1",
+		"@tailwindcss/vite": "npm:@tailwindcss/vite@4.1.14",
+		"@types/react": "npm:@types/react@19.2.2",
+		"@types/react-dom": "npm:@types/react-dom@19.2.2",
+		"@vitejs/plugin-react": "npm:@vitejs/plugin-react@5.0.4",
+		"globals": "npm:globals@16.4.0",
+		"react-cosmos": "npm:react-cosmos@7.0.0",
+		"react-cosmos-plugin-vite": "npm:react-cosmos-plugin-vite@7.0.0",
+		"sass-embedded": "npm:sass-embedded@1.93.2",
+		"tailwindcss": "npm:tailwindcss@4.1.14",
+		"typescript": "npm:typescript@5.9.3",
+		"typescript-eslint": "npm:typescript-eslint@8.46.1",
+		"vite": "npm:vite@^6.4.0"
 	}
 }

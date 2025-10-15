@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["wouter"]
+  "cSpell.words": ["tailwindcss", "wouter"],
+  "deno.enable": true
 }
