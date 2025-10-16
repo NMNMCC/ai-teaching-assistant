@@ -7,6 +7,7 @@ export function Action({
 	submit,
 	theme,
 	className,
+	in: _in,
 	...other
 }: BoxProps<"button"> & {
 	submit?: boolean
@@ -21,11 +22,11 @@ export function Action({
 						theme={theme ?? "neutral"}
 						className={clsx("select-none", className)}
 						in={{
+							..._in,
 							type: submit ? "submit" : "button",
 							className: clsx(
 								"hover:cursor-pointer",
-								!active ? "brightness-100" : "brightness-95",
-								"transition-[brightness]"
+								!active ? "brightness-100" : "brightness-95"
 							),
 						}}
 						clickable
@@ -35,3 +36,5 @@ export function Action({
 		</Button>
 	)
 }
+
+export type ActionProps = React.ComponentProps<typeof Action>

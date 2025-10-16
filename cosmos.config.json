@@ -6,8 +6,6 @@
 	},
 	"globalImports": [
 		"./src/main.css",
-		"./src/cosmos.tsx",
-		"./node_modules/@fontsource-variable/material-symbols-sharp/full.css",
-		"./node_modules/@fontsource-variable/ibm-plex-sans/index.css"
+		"./src/cosmos.ts"
 	]
 }

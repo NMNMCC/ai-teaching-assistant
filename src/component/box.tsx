@@ -41,37 +41,54 @@ export function Box<T extends React.ElementType = "div">({
 					"w-full",
 					"h-full",
 					clickable && "left-0 top-0 active:left-1 active:top-1",
-					match(theme || "plain", [
-						[
-							["primary", "blue"],
-							() => "border-blue_light bg-blue_dark text-white",
-						],
-						[
-							["secondary", "purple"],
-							() =>
-								"border-purple_light bg-purple_dark text-white",
-						],
-						[
-							["neutral", "grey"],
-							() => "border-gray_light bg-gray_dark text-white",
-						],
-						[["plain"], () => "border-black bg-white text-black"],
-						[
-							["red"],
-							() => "border-red_light bg-red_dark text-white",
-						],
-						[
-							["green"],
-							() => "border-green_light bg-green_dark text-white",
-						],
-						["default", () => theme],
-					]),
-					"border-4",
+					clsx(
+						match(theme ?? "plain", [
+							[
+								["primary", "blue"],
+								() =>
+									"border-blue_light bg-blue_dark text-white",
+							],
+							[
+								["secondary", "purple"],
+								() =>
+									"border-purple_light bg-purple_dark text-white",
+							],
+							[
+								["neutral", "grey"],
+								() =>
+									"border-gray_light bg-gray_dark text-white",
+							],
+							[
+								["plain"],
+								() => "border-black bg-white text-black",
+							],
+							[
+								["red"],
+								() => "border-red_light bg-red_dark text-white",
+							],
+							[
+								["green"],
+								() =>
+									"border-green_light bg-green_dark text-white",
+							],
+							["default", () => theme],
+							[
+								"finally",
+								(i, matched) =>
+									matched
+										? clsx(
+												"border-4",
+												"text-lg",
+												"text-black",
+												i
+											)
+										: i,
+							],
+						])
+					),
 					"px-3",
 					"py-2",
-					"text-lg",
-					"text-black",
-					"transition-[left,top,border-color,background-color]",
+					"transition-all",
 					_in?.className
 				)}
 			>

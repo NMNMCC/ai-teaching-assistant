@@ -1,4 +1,4 @@
-import "./style.tsx"
+import "./cosmos.ts"
 import { createRoot } from "react-dom/client"
 
 createRoot(document.getElementById("root")!).render(<></>)

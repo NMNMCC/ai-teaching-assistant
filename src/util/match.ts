@@ -1,20 +1,34 @@
+export type Resolver<TIn, TOut> = (i: TIn) => TOut
+export type Finally<TIn, TOut> = (i: TIn, matched: boolean) => TOut
+
 export const match = <TIn, TOut = never>(
 	i: TIn,
-	cases: [TIn[] | "default", (i: TIn) => TOut][]
+	cases: (
+		| [TIn[], Resolver<TIn, TOut>]
+		| ["default", Resolver<TIn, TOut>]
+		| ["finally", Finally<TIn, TOut>]
+	)[]
 ) => {
-	for (const [k, v] of cases) {
-		if (k === "default") {
-			continue
-		}
-		if (k.includes(i)) {
-			return v(i)
+	const _default = cases.find((c) => c[0] === "default")?.[1]
+	const _finally = cases.find((c) => c[0] === "finally")?.[1]
+
+	for (const [values, resolver] of cases.filter(
+		(v) => typeof v[0] !== "string"
+	)) {
+		if (values.includes(i)) {
+			if (_finally) {
+				return _finally(i, true)
+			}
+			return resolver(i)
 		}
 	}
 
-	const _default = cases.find(([k]) => k === "default")
 	if (_default) {
-		return _default[1](i)
+		if (_finally) {
+			return _finally(i, false)
+		}
+		return _default(i)
 	}
 
-	throw new Error(`Non-exhaustive match for value: ${i}`)
+	throw new Error(`No match for value: ${i}`)
 }
