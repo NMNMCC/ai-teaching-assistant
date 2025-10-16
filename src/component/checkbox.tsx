@@ -1,63 +1,65 @@
 import clsx from "clsx"
-import {Box} from "./box.tsx"
-import {Checkbox as BaseCheckbox, type CheckboxProps} from "@headlessui/react"
-import {Action} from "./action.tsx"
+import { Box } from "./box.tsx"
+import { Checkbox as BaseCheckbox, type CheckboxProps } from "@headlessui/react"
+import { Action } from "./action.tsx"
 import React from "react"
 
-export function Checkbox(
-	{label, title, description, className, ...other}:
-		& CheckboxProps
-		& {
-			title: string
-			description?: React.ReactNode
-			label?: string
-		},
-) {
+export function Checkbox({
+	label,
+	title,
+	description,
+	className,
+	...other
+}: CheckboxProps & {
+	title: string
+	description?: React.ReactNode
+	label?: string
+}) {
 	return (
 		<BaseCheckbox {...other} as={React.Fragment}>
-			{({checked}) => {
+			{({ checked }) => {
 				return (
 					<div
 						className={clsx(
 							"flex flex-row justify-start",
 							!checked ? "items-start" : "items-stretch",
-							className,
+							className
 						)}
 					>
 						<div className="flex flex-row justify-end items-start w-10 h-10 shrink-0 grow-0">
 							<Action
-								variant={!checked ? "plain" : "primary"}
+								theme={!checked ? "neutral" : "primary"}
 								className={clsx(
 									!checked ? "w-8 h-8" : "w-10 h-10",
 									"align-text-bottom",
-									"transition-[width,height]",
+									"transition-[width,height]"
 								)}
 							>
-								{label
-									? (
-										<span
-											className={clsx(
-												!checked
-													? "font-normal"
-													: "font-bold",
-											)}
-										>
-											{label}
-										</span>
-									)
-									: (
-										<span className="material-symbols-sharp">
-											{checked ? "check" : " "}
-										</span>
-									)}
+								{label ? (
+									<span
+										className={clsx(
+											!checked
+												? "font-normal"
+												: "font-bold"
+										)}
+									>
+										{label}
+									</span>
+								) : (
+									<span className="material-symbols-sharp">
+										{checked ? "check" : " "}
+									</span>
+								)}
 							</Action>
 						</div>
 						<Box
+							theme="bg-gray-50"
 							className="w-fit grow"
-							classNameContent={clsx(
-								"flex flex-row gap-2 justify-start items-stretch",
-								"bg-gray-50",
-							)}
+							in={{
+								className: clsx(
+									"flex flex-row gap-2 justify-start items-stretch"
+								),
+							}}
 						>
 							<div className="w-full flex flex-col">
 								<div className="flex flex-row text-lg font-medium">

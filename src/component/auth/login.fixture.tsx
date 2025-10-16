@@ -1,3 +1,3 @@
-import {Login} from "./login.tsx"
+import { Login } from "./login.tsx"
 
 export default <Login />

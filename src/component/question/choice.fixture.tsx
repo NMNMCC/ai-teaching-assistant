@@ -1,25 +1,31 @@
-import {Choice} from "./choice.tsx"
+import { Choice } from "./choice.tsx"
 
 export default {
-	"Single": (
+	Single: (
 		<Choice
 			title="Choice the correct answer"
-			items={[{
-				title: "Item A",
-			}, {
-				title: "Item B",
-			}]}
+			items={[
+				{
+					title: "Item A",
+				},
+				{
+					title: "Item B",
+				},
+			]}
 			className="w-128"
 		/>
 	),
-	"Multiple": (
+	Multiple: (
 		<Choice
 			title="Choice the correct answer(s)"
-			items={[{
-				title: "Item A",
-			}, {
-				title: "Item B",
-			}]}
+			items={[
+				{
+					title: "Item A",
+				},
+				{
+					title: "Item B",
+				},
+			]}
 			multiple
 			className="w-128"
 		/>
@@ -27,11 +33,14 @@ export default {
 	"With Numbering": (
 		<Choice
 			title="Choice the correct answer"
-			items={[{
-				title: "Item A",
-			}, {
-				title: "Item B",
-			}]}
+			items={[
+				{
+					title: "Item A",
+				},
+				{
+					title: "Item B",
+				},
+			]}
 			numbering="decimal"
 			className="w-128"
 		/>
@@ -49,15 +58,20 @@ export default {
 					festive decorations.
 				</>
 			}
-			items={[{
-				title: "Because they are both holidays.",
-			}, {
-				title: "Because Oct 31 == Dec 25 in base 8.",
-			}, {
-				title: "Because they are too busy coding to notice the date.",
-			}, {
-				title: "Because they both involve spooky bugs.",
-			}]}
+			items={[
+				{
+					title: "Because they are both holidays.",
+				},
+				{
+					title: "Because Oct 31 == Dec 25 in base 8.",
+				},
+				{
+					title: "Because they are too busy coding to notice the date.",
+				},
+				{
+					title: "Because they both involve spooky bugs.",
+				},
+			]}
 			className="w-128"
 			numbering="alpha"
 		/>

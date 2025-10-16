@@ -1,4 +1,4 @@
 {
-  "cSpell.words": ["tailwindcss", "wouter"],
-  "deno.enable": true
+  "cSpell.words": ["Attributify", "monacoeditor", "tailwindcss", "unocss", "wouter"],
+  "deno.enable": false
 }

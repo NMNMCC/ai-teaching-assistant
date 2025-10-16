@@ -1,39 +1,28 @@
 import React from "react"
 import clsx from "clsx"
-import {Box} from "./box.tsx"
+import { Box } from "./box.tsx"
 
-export function Input(
-	{children, variant, className, clickable, ...other}:
-		React.PropsWithChildren<
-			& React.InputHTMLAttributes<HTMLInputElement>
-			& {variant: "normal" | "monospace"; clickable?: boolean}
-		>,
-) {
+export function Input({
+	children,
+	className,
+	clickable,
+	...other
+}: React.PropsWithChildren<
+	React.InputHTMLAttributes<HTMLInputElement> & { clickable?: boolean }
+>) {
 	return (
-		<Box
-			className={clsx(
-				"bg-gray-50 focus-within:bg-white",
-				className,
-			)}
-			clickable={clickable}
-		>
-			<label
-				className={clsx(
-					"flex",
-					"w-full",
-					"h-full",
-				)}
-			>
+		<Box theme="plain" className={clsx(className)} clickable={clickable}>
+			<label className={clsx("flex", "w-full", "h-full")}>
 				{children}
 				<input
 					{...other}
 					className={clsx(
-						variant === "normal" ? "font-sans" : "font-mono",
+						"w-full",
 						"outline-0",
 						"px-2",
 						"py-1",
 						"text-lg",
-						"align-bottom",
+						"align-bottom"
 					)}
 					hidden={children !== undefined}
 				/>

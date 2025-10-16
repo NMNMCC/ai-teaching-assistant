@@ -1,8 +1,12 @@
 {
 	"$schema": "http://json.schemastore.org/cosmos-config",
 	"plugins": ["react-cosmos-plugin-vite"],
+	"vite": {
+		"indexPath": "./src/cosmos.tsx"
+	},
 	"globalImports": [
 		"./src/main.css",
+		"./src/cosmos.tsx",
 		"./node_modules/@fontsource-variable/material-symbols-sharp/full.css",
 		"./node_modules/@fontsource-variable/ibm-plex-sans/index.css"
 	]

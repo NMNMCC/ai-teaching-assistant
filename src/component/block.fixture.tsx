@@ -1,5 +1,9 @@
-import {Block} from "./block.tsx"
+import { Block } from "./block.tsx"
 
 export default {
-	"Video": <Block icon="videocam" className="bg-green-200">Video</Block>,
+	Video: (
+		<Block icon="videocam" className="bg-green-200">
+			Video
+		</Block>
+	),
 }

@@ -1,9 +1,4 @@
-import {createRoot} from "react-dom/client"
-import {Router} from "wouter"
-import "@fontsource-variable/material-symbols-sharp"
+import "./style.tsx"
+import { createRoot } from "react-dom/client"
 
-createRoot(document.getElementById("root")!)
-	.render(
-		<Router>
-		</Router>,
-	)
+createRoot(document.getElementById("root")!).render(<></>)

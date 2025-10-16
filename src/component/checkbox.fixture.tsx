@@ -1,13 +1,13 @@
-import {Checkbox} from "./checkbox.tsx"
+import { Checkbox } from "./checkbox.tsx"
 
 export default {
-	"Basic": (
+	Basic: (
 		<Checkbox
 			title="Basic Checkbox"
 			description="This is a basic checkbox"
 		/>
 	),
-	"Checked": (
+	Checked: (
 		<Checkbox
 			title="Checked Checkbox"
 			description="This checkbox is checked"

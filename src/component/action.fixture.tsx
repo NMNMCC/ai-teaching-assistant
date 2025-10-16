@@ -1,14 +1,6 @@
-import {Action} from "./action.tsx"
+import { Action } from "./action.tsx"
 
 export default {
-	"Primary": (
-		<Action variant="primary">
-			Primary Action
-		</Action>
-	),
-	"Secondary": (
-		<Action variant="secondary">
-			Secondary Action
-		</Action>
-	),
+	Primary: <Action theme="primary">Primary Action</Action>,
+	Secondary: <Action theme="secondary">Secondary Action</Action>,
 }
