@@ -1,5 +1,5 @@
 export type Resolver<TIn, TOut> = (i: TIn) => TOut
-export type Finally<TIn, TOut> = (i: TIn, matched: boolean) => TOut
+export type Finally<TIn, TOut> = (i: TIn, o: TOut, matched: boolean) => TOut
 
 export const match = <TIn, TOut = never>(
 	i: TIn,
@@ -17,7 +17,7 @@ export const match = <TIn, TOut = never>(
 	)) {
 		if (values.includes(i)) {
 			if (_finally) {
-				return _finally(i, true)
+				return _finally(i, resolver(i), true)
 			}
 			return resolver(i)
 		}
@@ -25,7 +25,7 @@ export const match = <TIn, TOut = never>(
 
 	if (_default) {
 		if (_finally) {
-			return _finally(i, false)
+			return _finally(i, _default(i), false)
 		}
 		return _default(i)
 	}

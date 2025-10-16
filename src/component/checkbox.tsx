@@ -53,7 +53,7 @@ export function Checkbox({
 							</Action>
 						</div>
 						<Box
-							theme="bg-gray-50"
+							theme="plain"
 							className="w-fit grow"
 							in={{
 								className: clsx(

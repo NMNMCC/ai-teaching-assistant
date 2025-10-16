@@ -18,8 +18,7 @@ export function Block({
 			{({ hover, active }) => (
 				<Box
 					{...other}
-					border="border-blue-800"
-					classNameContent={clsx("select-none", className)}
+					in={{ className: clsx("select-none", className) }}
 				>
 					<div className={clsx("flex flex-col min-w-24 min-h-24")}>
 						<div
