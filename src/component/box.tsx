@@ -27,7 +27,7 @@ export function Box<T extends React.ElementType = "div">({
 			className={clsx(
 				"relative",
 				"origin-bottom-right",
-				"transition-[scale]",
+				"isolate",
 				className
 			)}
 		>

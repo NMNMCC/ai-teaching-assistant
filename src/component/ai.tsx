@@ -13,7 +13,10 @@ export function AI({ size, ...other }: Merge<ActionProps, { size?: AISize }>) {
 	React.useEffect(() => {
 		const interval = setInterval(
 			() => {
-				setDeg((deg) => (deg + 0.1) % 360)
+				setDeg(
+					(deg) =>
+						((Math.floor(Math.random()) + 1) * (deg + 0.1)) % 360
+				)
 			},
 			10 * (1 / speed)
 		)
